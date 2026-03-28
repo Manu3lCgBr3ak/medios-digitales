@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import Arcadia_ico from '../../assets/icons/Arcadia_ico.svg'
+---
+<div class='w-full relative z-10 bg-[#E9E8E8]'>
+    <div class='w-[85%] min-h-[20rem] bg-[#FFAB50] rounded-br-[3rem] flex justify-center items-center shadow-95-a-001 md:gap-[4rem] flex-col md:flex-row py-4'>
+        <div class='bg-[#000000] rounded-[2rem] text-[#e9e8e8] IbmRegular flex flex-col w-[90%] md:w-[50%] text-[2.5vw] md:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1vw] gap-[.5rem] px-[2rem] py-[2rem]'>
+          <p>
+            <span>✅ Listas en días, no meses</span>
+          </p>
+          <p>
+            <span>✅ Dominio propio + hosting 1 año incluido.</span>
+          </p>
+          <p class='flex flex-col invert bg-[#161717] text-[#2fbdf2] p-[.5rem] '>
+            <span>✅ Diseño único</span>
+            <span class='ibm-plex-mono-light ml-[1rem]'>Nada de plantillas. Hecho para tu marca.</span>
+          </p>
+          <p>
+            <span>✅ SSL incluido — tu web es segura desde el primer día.</span>
+          </p>
+          <p>
+            <span>✅ Tus clientes la verán bien en cualquier dispositivo.</span>
+          </p>
+        </div>
+        <Image
+            src={Arcadia_ico}
+            alt="Logo de Arcadia"
+            class='w-[20%] h-auto mt-[1rem]'
+            loading="lazy"
+        />
+      </div>
+    </div>

@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets';
+import Arcadia_ico from '../../../assets/icons/Arcadia_ico.svg';
+import Arcadia_Logo from "../../../assets/images/Arcadia_Logo.svg";
+---
+<div class="w-full fixed left-1/2 -translate-x-1/2 flex items-center justify-center z-50 bottom-[5%] pointer-events-none">
+  <div
+    id="by-arcadia"
+    class="relative bg-[#000000] rounded-full p-[.6rem] px-[1rem] shadow-xl/50
+           flex items-center justify-center Ibmlight
+           text-[2vw] md:text-[1vw] lg:text-[.8vw] xl:text-[.6vw]
+           overflow-hidden
+           transition-[max-width] duration-500 ease-in-out"
+    style="max-width:14rem"
+  >
+    <!-- Bloque grande -->
+    <div
+      id="arcadia-full"
+      class="flex items-center gap-[.2rem]
+             transition-all duration-300 ease-in-out"
+      style="transform-origin:left"
+    >
+      <p class="text-[#E9E8E8] leading-none">
+        <span class="IbmBold-italic">Creado</span>
+        <span>Por</span>
+      </p>
+
+      <!-- FRAME del logo (normaliza altura) -->
+      <div class="h-[1.1rem] flex items-center">
+        <Image
+          src={Arcadia_Logo}
+          alt="Arcadia Logo"
+          class="w-[4rem]"
+        />
+      </div>
+    </div>
+
+    <!-- Ícono (FUERA del layout + MISMA ALTURA) -->
+    <div
+      id="arcadia-ico"
+      class="absolute inset-0 m-auto h-[1.1rem]
+             flex items-center justify-center
+             opacity-0 pointer-events-none
+             transition-opacity duration-300 ease-in-out"
+    >
+      <Image
+        src={Arcadia_ico}
+        alt="Arcadia Ícono"
+        class="w-[1.1rem]"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  if (typeof window === 'undefined') return;
+
+  const footer = document.getElementById('by-arcadia');
+  const fullBlock = document.getElementById('arcadia-full');
+  const icoEl = document.getElementById('arcadia-ico');
+
+  if (!footer || !fullBlock || !icoEl) return;
+
+  const EXPANDED = '14rem';
+  const COLLAPSED = '2.6rem';
+
+  let collapsed = false;
+
+  const collapse = () => {
+    footer.style.maxWidth = COLLAPSED;
+
+    fullBlock.style.opacity = '0';
+    fullBlock.style.transform = 'scaleX(0)';
+    fullBlock.style.pointerEvents = 'none';
+
+    icoEl.classList.replace('opacity-0', 'opacity-100');
+  };
+
+  const expand = () => {
+    footer.style.maxWidth = EXPANDED;
+
+    fullBlock.style.opacity = '1';
+    fullBlock.style.transform = 'scaleX(1)';
+    fullBlock.style.pointerEvents = 'auto';
+
+    icoEl.classList.replace('opacity-100', 'opacity-0');
+  };
+
+  const update = () => {
+    const shouldCollapse = window.scrollY > 30;
+    if (shouldCollapse === collapsed) return;
+
+    collapsed = shouldCollapse;
+    collapsed ? collapse() : expand();
+  };
+
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+})();
+</script>

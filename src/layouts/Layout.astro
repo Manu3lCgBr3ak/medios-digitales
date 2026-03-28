@@ -1,0 +1,128 @@
+---
+import "../styles/fonts.css";
+import Footer from "../components/Footer.astro";
+import CreadoPorArcadia from "../components/ui/design_system/CreadoPorArcadia.astro"
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ejemplo?: boolean;
+  canonical?: string;
+}
+
+const {
+  title = "Diseño de páginas web profesionales en México | Arcadia Studio",
+  description = "Diseño de páginas web y tiendas online a medida. Dominio, hosting y SSL incluidos. Webs listas para vender en días, no meses.",
+  ejemplo = false,
+  canonical = "https://arcadia-studio.shop"
+  
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <!-- Básico -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO principal -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO local -->
+    <meta name="geo.region" content="MX" />
+    <meta name="geo.placename" content="México" />
+
+    <!-- Open Graph (WhatsApp / Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arcadia Studio" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://arcadia-studio.shop/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://arcadia-studio.shop/og-image.jpg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- Favicon -->
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/png"
+      href="/favicon.png"
+    />
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebDesignAgency",
+      "name": "Arcadia Studio",
+      "url": "https://arcadia-studio.shop",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Mexico"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      }
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N699G4Z0EG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-N699G4Z0EG');
+    </script>
+
+  </head>
+
+  <body>
+    <slot />
+    {ejemplo ? <CreadoPorArcadia /> : <Footer />}
+
+    <!-- Script UX (no afecta SEO) -->
+    <script is:inline>
+      const originalTitle = document.title;
+      const awayTitle = "Tu próxima web empieza aquí | Arcadia Studio";
+      const faviconColor = "/favicon.png";
+      const faviconGray = "/favicon-gray.png";
+      const favicon = document.getElementById("favicon");
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          document.title = awayTitle;
+          if (favicon) favicon.href = faviconGray;
+        } else {
+          document.title = originalTitle;
+          if (favicon) favicon.href = faviconColor;
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+

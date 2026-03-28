@@ -1,0 +1,393 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "../../styles/global.css";
+
+import { Image } from 'astro:assets';
+import YogaHero from '../../assets/ejemplos/yoga/yoga-web-desing.jpg';
+import YogaHeroInfo from '../../assets/ejemplos/yoga/yoga-web-desing-chill.jpg';
+import YogaPerfil from '../../assets/ejemplos/yoga/Foto_perfil.png'
+
+import YogaP1 from '../../assets/ejemplos/yoga/yoga-w1.jpg'
+import YogaP2 from '../../assets/ejemplos/yoga/yoga-w2.jpg'
+import YogaP3 from '../../assets/ejemplos/yoga/yoga-w3.jpg'
+---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+
+<Layout ejemplo={true}>
+    <div class="w-full bg-[#eaeff5] montserrat-alternates-regular pb-[1rem]
+        text-[3vw] md:text-[2.2vw] lg:text-[1vw] xl:text-[1vw]
+    ">
+        <div id="navBar" class="w-full py-[1rem] fixed left-1/2 -translate-x-1/2 top-[2%] flex justify-center items-center gap-[.4rem] bg-[#fffefe] p-[.4rem] shadow-xl z-50 transition-all duration-100 ease-out">
+            <a href="/ejemplos/pagina-de-servicios-ejemplo/#Inicio" class="transition-all duration-200 ease-out px-[1rem] bg-[#028456] text-[#eaeff5] rounded-full" data-section="Inicio">Inicio</a>
+            <a href="/ejemplos/pagina-de-servicios-ejemplo/#Servicio" class="transition-all duration-200 ease-out px-[1rem] bg-[#028456] text-[#eaeff5] rounded-full" data-section="Servicio">Servicio</a>
+            <a href="/ejemplos/pagina-de-servicios-ejemplo/#Nosotros" class="transition-all duration-200 ease-out px-[1rem] bg-[#028456] text-[#eaeff5] rounded-full" data-section="Nosotros">Nosotros</a>
+        </div>
+      
+        <div class="w-full flex flex-col lg:flex-row pt-[5rem] md:pt-[7rem] lg:pt-[2rem] 2xl:p-[3rem]" id="Inicio">
+            <div class="w-[100%] lg:w-[80%] flex justify-end items-end relative">
+                <div class="absolute left-0 top-[30%] lg:top-[20%] z-1 flex flex-col justify-center items-center">
+                    <div class="px-[1rem] py-[.2rem] bg-[#fffefe] shadow-xl mb-[1rem] rounded-full z-2 -ml-[40%] md:-ml-[15%] lg:-ml-[20%]">
+                        <p>Sofía Luna Ramírez</p>
+                    </div>
+                    <p class="flex flex-col justify-center items-start leading-none text-[#028456]
+                        text-[8vw] lg:text-[3vw] xl:text-[4vw] 
+                    ">
+                        <span class="bg-[#eaeff5] px-[5rem] pt-[1rem] rounded-r-full text-[3vw]">Entrenador</span>
+                        <span class="bg-[#eaeff5] px-[3rem] rounded-tr-4xl montserrat-alternates-medium">personal</span>
+                        <span class="bg-[#eaeff5] p-[2rem] pt-[.5rem] rounded-full montserrat-alternates-bold
+                          text-[15vw] md:text-[12vw] lg:text-[6vw] xl:text-[6vw]
+                        ">de Yoga</span>
+                    </p>
+                    <div>
+                      <button class="bg-[#028456] p-[1rem] px-[2rem] text-[#fffefe] mt-[1rem] transition-all duration-300 ease-out
+                        text-[7vw] md:text-[4vw] lg:text-[2vw] xl:text-[2vw] 
+                        hover:bg-[#fffefe] hover:text-[#028456] hover:scale-105 rounded-xl
+                      ">Reserva Ahora</button>
+                    </div>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+                <div class="w-[80%] relative">
+                    <div class="w-full aspect-[8/12] lg:aspect-[16/9] relative">
+                      <Image
+                        loading="eager"
+                        src={YogaHero}
+                        alt="Yoga"
+                        class="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                      />
+                    </div>
+                    <div class="text-center bg-[#028456]/20 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-[1rem] max-w-md mx-auto absolute top-[4%] -left-[10%] lg:bottom-[4%] lg:right-[2%] lg:top-auto lg:left-auto
+                      text-[3vw] md:text-[3vw] lg:text-[1.4vw] xl:text-[1.2vw]
+                    ">
+                        <p class="text-white mb-2 flex flex-col leading-none montserrat-alternates-semibold">
+                            <span>+ Mas de 300M</span>
+                            <span>Practican Yoga</span>
+                        </p>
+                        <p class="text-white/80">
+                            Únete a ellos hoy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[100%] lg:w-[20%] pt-[4rem] flex flex-col justify-end items-center p-[1rem]">
+              <p class="montserrat-alternates-medium leading-none
+                text-[7vw] md:text-[10vw] lg:text-[1.8vw] xl:text-[1.6vw] 
+              ">Clases diseñadas para todos</p>
+              <p class="my-[.5rem]">Soy Sofía Luna, entrenadora certificada de yoga con más de 8 años de experiencia ayudando a personas a reconectar con su cuerpo y su respiración.</p>
+              <div class="w-full relative">
+                <div class="w-full aspect-9/11 relative">
+                  <Image
+                    src={YogaHeroInfo}
+                    alt="Yoga"
+                    class="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                    loading="lazy"
+                  />
+                </div>
+              <div class="bg-[#028456]/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-[1rem] max-w-md mx-auto absolute top-2 right-2 text-center leading-none montserrat-alternates-semibold">
+                <p class="text-white">
+                  Guadalajara, Jalisco
+                </p>
+                  <p class="text-white/80">
+                    Presencial y en línea
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Servicios */}
+        <div class="w-full bg-[#eaeff5] flex flex-col lg:flex-row" id="Servicio">
+          <div class="w-full lg:w-[60%] flex justify-center lg:justify-start items-center p-[2rem] lg:p-0 gap-[1rem]">
+            <div class="w-[30%] aspect-9/11 rounded-xl bg-[#fffefe] relative shadow-2xl overflow-hidden">
+              <Image
+                src={YogaP1}
+                alt="Yoga"
+                class="absolute inset-0 w-full h-full object-cover mask-b-from-0% mask-b-to-100%"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-[30%] aspect-9/11 rounded-xl bg-[#fffefe] relative shadow-2xl overflow-hidden">
+              <Image
+                src={YogaP2}
+                alt="Yoga"
+                class="absolute inset-0 w-full h-full object-cover mask-b-from-0% mask-b-to-100%"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-[30%] aspect-9/11 rounded-xl bg-[#fffefe] relative shadow-2xl overflow-hidden">
+              <Image
+                src={YogaP3}
+                alt="Yoga"
+                class="absolute inset-0 w-full h-full object-cover mask-b-from-0% mask-b-to-100%"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="flex-1 flex items-center bg-[#028456] py-[3rem] rounded-bl-[2rem]">
+            <div class="w-[80%] shadow-2xl bg-[#ffffff]/50 backdrop-blur-md border border-[#eaeff5] rounded-xl shadow-lg p-[2rem] max-w-md mx-auto montserrat-alternates-semibold backdrop-blur-[2px]">
+
+            <form method="post">
+              <div class="flex flex-col lg:flex-row gap-[1rem] justify-center items-center lg:items-start">
+
+                <div class="w-full">
+                  <label for="nombre" class="leading-tight">Nombre completo</label><br />
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    class="box-border w-full bg-[#eaeff5] rounded-md p-[.35rem] mt-[.2rem]
+                          focus:outline-none focus:border-2 focus:border-[#028456]"
+                  />
+                  <br /><br />
+
+                  <label for="email" class="leading-tight">Correo electrónico</label><br />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="box-border w-full bg-[#eaeff5] rounded-md p-[.35rem] mt-[.2rem]
+                          focus:outline-none focus:border-2 focus:border-[#028456]"
+                  />
+                  <br /><br />
+
+                  <label for="telefono" class="leading-tight">Teléfono / WhatsApp</label><br />
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    required
+                    class="box-border w-full bg-[#eaeff5] rounded-md p-[.35rem] mt-[.2rem]
+                          focus:outline-none focus:border-2 focus:border-[#028456]"
+                  />
+                  <br/><br />
+                </div>
+              </div>
+
+              <div class="w-full flex justify-start items-center">
+                <button
+                  type="submit"
+                  class="w-full lg:w-auto bg-[#000000] text-[#fffefe] p-[1rem] rounded-lg
+                        hover:bg-[#fffefe] hover:text-[#028456] hover:scale-105
+                        transition-all duration-300 ease-out hover:shadow-xl"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
+
+          </div>
+
+          </div>
+        </div>
+        {/* Sobre Sofia */}
+        <div class="w-full bg-[#eaeff5] flex flex-col lg:flex-row justify-start items-center p-[2rem] gap-[1rem]" id="Nosotros">
+          <div class="w-full lg:w-[80%] bg-[#fffefe] rounded-2xl rounded-l-4xl flex flex-col lg:flex-row">
+            <div class="w-full lg:w-[40%] aspect-9/10 rounded-4xl overflow-hidden relative">
+              <Image
+                src={YogaPerfil}
+                alt="Yoga"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex flex-col p-[2rem] md:p-[4rem] justify-center">
+              <p class="text-[#028456] text-[10vw] md:text-[6vw] lg:text-[2.8vw] xl:text-[3vw] leading-none mb-[1rem] montserrat-alternates-extrabold">Quien es Sofía Luna</p>
+              <div class="w-full">
+                <p><span class="montserrat-alternates-semibold">Nombre:</span> Sofía Luna Ramírez</p>
+                <p><span class="montserrat-alternates-semibold">Profesión:</span> Entrenadora certificada de Yoga y Bienestar</p> <br>
+                <p><span class="montserrat-alternates-semibold">Marca personal:</span>  Yoga con Sofía</p>
+                <p><span class="montserrat-alternates-semibold">Eslogan:</span>  Equilibrio para tu cuerpo, calma para tu mente</p> <br>
+                <br>
+                <p><span class="montserrat-alternates-semibold">Ciudad:</span> Guadalajara, Jalisco (puede adaptarse a otra ciudad)</p> <br>
+                <p><span class="montserrat-alternates-semibold">Modalidad:</span>  Presencial y en línea</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 w-full flex flex-col justify-center p-[1rem]">
+            <p class="montserrat-alternates-semibold leading-none flex flex-col
+              text-[7vw] md:text-[4vw] lg:text-[2vw] xl:text-[3vw] text-end lg:text-start
+            ">
+              <span>Horarios</span>
+              <span>disponibles</span>
+            </p>
+            <div class="w-[80%] mt-[1rem] ml-[2rem]">
+              <li>Lunes a Viernes: 7:00 am – 11:00 am / 5:00 pm – 8:00 pm</li>
+              <li>Sábados: 9:00 am – 12:00 pm</li>
+              <li>Domingos: Cerrado</li>
+            </div>
+          </div>
+        </div>
+        {/* footer */}
+        <div class="w-full flex justify-center items-center pb-[4rem]">
+          <div class="w-[95%] aspect-9/10 lg:aspect-21/9 bg-[#028456] rounded-[2rem] lg:rounded-[4rem] relative overflow-hidden">
+            <p class="text-[#fffefe] montserrat-alternates-black-italic text-[70vw] md:text-[75vw] lg:text-[30vw] absolute left-1/2 transform -translate-x-1/2 -bottom-[7rem] md:-bottom-[16rem] lg:-bottom-[8rem] xl:lg:-bottom-[10rem]">SOFIAYOGA</p>
+          </div>
+          <div>
+            <p></p>
+          </div>
+        </div>
+    </div>
+</Layout>
+
+<style scoped>
+.montserrat-alternates-thin {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.montserrat-alternates-extralight {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.montserrat-alternates-light {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-alternates-regular {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-alternates-medium {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-alternates-semibold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-alternates-bold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-alternates-extrabold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-alternates-black {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.montserrat-alternates-thin-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.montserrat-alternates-extralight-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.montserrat-alternates-light-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.montserrat-alternates-regular-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.montserrat-alternates-medium-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.montserrat-alternates-semibold-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.montserrat-alternates-bold-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.montserrat-alternates-extrabold-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.montserrat-alternates-black-italic {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+</style>
+<script>
+  const nav = document.getElementById("navBar") as HTMLElement | null;
+
+  if (nav) {
+    const links = nav.querySelectorAll<HTMLElement>("[data-section]");
+    const sections = Array.from(links).map(link =>
+      document.getElementById(link.dataset.section as string)
+    );
+
+    let isCompact = false;
+    let activeIndex = -1;
+
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+
+      // 🔹 ancho (solo si cambia)
+      if (y > 50 && !isCompact) {
+        nav.classList.remove("w-full");
+        nav.classList.add("w-[75%]", "lg:w-[25%]" , "xl:w-[22%]" , "rounded-full");
+        isCompact = true;
+      }
+
+      if (y <= 50 && isCompact) {
+        nav.classList.add("w-full");
+        nav.classList.remove("w-[75%]", "lg:w-[25%]" , "xl:w-[22%]" , "rounded-full");
+        isCompact = false;
+      }
+
+      // 🔹 sección activa
+      const scrollPos = y + window.innerHeight / 3;
+
+      sections.forEach((section, i) => {
+        if (!section) return;
+
+        if (
+          scrollPos >= section.offsetTop &&
+          scrollPos < section.offsetTop + section.offsetHeight &&
+          activeIndex !== i
+        ) {
+          links.forEach(l =>
+            l.classList.remove("bg-[#028456]", "text-[#eaeff5]")
+          );
+          links[i].classList.add("bg-[#028456]", "text-[#eaeff5]");
+          activeIndex = i;
+        }
+      });
+    });
+  }
+</script>

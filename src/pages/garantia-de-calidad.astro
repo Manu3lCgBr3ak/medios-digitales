@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+import LegalTermsEn from '../components/ui/legal/LegalTermsEn.astro'
+---
+
+<Layout title="Garantía de Calidad en Desarrollo Web | Arcadia Studio">
+    <LegalTermsEn title="Garantía de Calidad">
+        <div class="w-full Ibmlight text-[3vw] md:text-[2.5vw] lg:text-[1vw] 2xl:text-[.9vw] flex flex-col">
+            <p class="mb-[.5rem] self-end">Última actualización: 28 de diciembre 2025</p>
+            <p>En Arcadia Studio nos comprometemos a ofrecer servicios de alta calidad y soluciones web profesionales.</p>
+            <div class="w-[90%] self-end">
+                <p class="IbmBold my-[.5rem]">Nuestro compromiso</p>
+                <ul class="pl-[2rem] list-disc">
+                    <li>Diseños funcionales y modernos</li>
+                    <li>Código optimizado y buenas prácticas</li>
+                    <li>Comunicación clara durante el proyecto</li>
+                    <li>Entregables acordes a lo pactado con el cliente</li>
+                </ul>
+                <p class="IbmBold my-[.5rem]">Limitaciones</p>
+                <ul class="pl-[2rem] list-disc">
+                    <li class="list-none">La garantía no cubre:</li><br>
+                    <li>Cambios solicitados fuera del alcance acordado</li>
+                    <li>Problemas derivados de servicios de terceros</li>
+                    <li>Modificaciones realizadas por terceros después de la entrega</li>
+                </ul>
+            </div>
+        </div>
+    </LegalTermsEn>
+</Layout>

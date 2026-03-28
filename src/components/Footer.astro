@@ -1,0 +1,257 @@
+---
+import { Image } from 'astro:assets';
+import arcadiafooter from '../assets/images/Arcadia_Logo_footer.svg'
+import Arcadia_ico from '../assets/icons/Arcadia_ico.svg'
+import Instagram_ico from '../assets/icons/Instagram_ico.svg'
+import whatsapp_ico from '../assets/icons/whatsapp_ico.svg'
+import youtube_ico from '../assets/icons/youtube_ico.svg'
+import tiktok_ico from '../assets/icons/tiktok_ico.svg'
+
+---
+<div class="w-full grayscale text-[#E9E8E8]">
+    <div class='w-full bg-red-200 pt-[2rem] items-end
+        flex justify-center lg:justify-end  
+    '>
+        <Image
+            src={arcadiafooter}
+            alt="Logo de Arcadia"
+            class='w-[90%] md:w-[70%] h-auto translate-y-1'
+            loading="lazy"
+        />
+    </div>
+    {/* Div black */}
+    <div class="w-full bg-[#000000]
+        flex flex-col justify-center items-center
+        py-[2rem] md:py-[4rem]
+    ">  
+        {/* Div white */}
+        <div class="w-[80%] FooterBackground relative p-[2rem] gap-[2rem] xl:gap-[1rem] 
+            flex flex-col items-center
+            
+            rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem]
+        ">  
+            {/* First child */}
+            <div class='-m-[2rem] 
+                gap-[2rem] xl:gap-0
+                flex flex-col items-center
+                xl:flex-row xl:justify-between xl:pr-[2rem]
+            '>
+                {/* Arcadia-Studio letters first-child */}
+                <div class="first:self-start">
+                    <div class='bg-[#000000]
+                        pb-[1rem] md:pb-[2rem] pr-[1rem] md:pr-[2rem]
+                        rounded-br-[1rem] md:rounded-br-[2rem] lg:rounded-br-[2rem] xl:rounded-br-[3rem]
+                    '>
+                        <p class='IbmBold leading-none flex
+                            text-[7vw] md:text-[6.5vw] lg:text-[5vw] xl:text-[4vw] 2xl:text-[4vw]
+                        '>
+                            Arcadia
+                            <span class='IbmBold-italic'>-Studio</span>
+                        </p>
+                        <p class='Ibmlight leading-none 
+                            text-[7vw] md:text-[6.5vw] lg:text-[5vw] xl:text-[4vw] 2xl:text-[4vw]
+                        '>
+                            Desarrollo web
+                        </p>
+                    </div>
+                    <div class='h-15 aspect-1/1 absolute'>
+                        <div class='w-full h-full bg-[#000000] [mask-image:radial-gradient(circle_at_bottom_right,transparent_70%,black_71%)]'></div>
+                    </div>
+                </div>
+                {/* Social Media */}
+                <div class="w-[80%] xl:w-[40%] flex bg-[#000000] overflow-hidden rounded-full">
+                    <div class="w-[30%] flex">
+                        <div class="w-[80%] h-full bg-[#E9E8E8] relative flex 
+                            justify-center items-center
+                        ">
+                            <Image
+                                src={Arcadia_ico}
+                                alt="Logo de Arcadia"
+                                class="h-auto w-[50%] invert"
+                                loading="lazy"
+                            />
+                            <div class='h-[45%] aspect-1/1 absolute right-0 bottom-0'>
+                                <div class='w-full h-full bg-[#000000] [mask-image:radial-gradient(circle_at_top_left,transparent_70%,black_71%)]'></div>
+                            </div>
+                        </div>
+                        <div class="w-[20%]">
+                            <div class='h-[45%] aspect-1/1'>
+                                <div class='w-full h-full bg-[#E9E8E8] [mask-image:radial-gradient(circle_at_bottom_right,transparent_70%,black_71%)]'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[70%] h-full relative">
+                        <div class="w-full flex justify-center items-center
+                            gap-[.5rem] md:gap-[1rem]
+                            py-[1rem]
+                        ">
+                            <a href="https://wa.me/message/FQDZ6T6NQTXGE1" class="w-[15%] aspect-1/1 rounded-xl
+                                flex justify-center items-center
+                                transition-all duration-300 ease-out
+                                hover:scale-105 hover:invert hover:bg-[#161717] hover:p-1
+                            ">
+                                <Image
+                                    src={whatsapp_ico}
+                                    alt="Logo de Arcadia"
+                                    class="h-auto w-[70%]"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </a>
+                            <a href="https://www.tiktok.com/@_arcadiastudio?_r=1&_t=ZS-92atA6gHJkv" class="w-[15%] aspect-1/1 rounded-xl
+                                flex justify-center items-center
+                                transition-all duration-300 ease-out
+                                hover:scale-105 hover:invert hover:bg-[#161717] hover:p-1
+                            ">
+                                <Image
+                                    src={tiktok_ico}
+                                    alt="Logo de Arcadia"
+                                    class="h-auto w-[70%]"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </a>
+                            <a href="https://www.instagram.com/_arcadiastudio__" class="w-[15%] aspect-1/1 rounded-xl
+                                flex justify-center items-center
+                                transition-all duration-300 ease-out
+                                hover:scale-105 hover:invert hover:bg-[#161717] hover:p-1
+                            ">
+                                <Image
+                                    src={Instagram_ico}
+                                    alt="Logo de Arcadia"
+                                    class="h-auto w-[70%]"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </a>
+                            <a href="https://www.youtube.com/@ArcadiaStudio-DevWeb" class="w-[15%] aspect-1/1 rounded-xl
+                                flex justify-center items-center
+                                transition-all duration-300 ease-out
+                                hover:scale-105 hover:invert hover:bg-[#161717] hover:p-1
+                            ">
+                                <Image
+                                    src={youtube_ico}
+                                    alt="Logo de Arcadia"
+                                    class="h-auto w-[70%]"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Mid Content */}
+            <div class="w-full 
+                my-[.5rem] md:my-[1rem]
+            ">
+                
+            </div>
+            {/* Last child */}
+            <div class="-m-[2rem] xl:pl-[4rem]
+                gap-[2rem] xl:gap-0
+                flex flex-col xl:flex-row items-center
+                xl:justify-between self-stretch
+            ">
+                {/* Navetation */}
+                <div class="IbmRegular
+                    w-[90%] md:w-[80%] xl:w-full 2xl:w-full
+                    flex justify-evenly 
+                    xl:justify-center xl:gap-[1rem]
+                    text-[2.5vw] md:text-[2.5vw] lg:text-[1vw] 2xl:text-[1vw]
+                ">
+                    <a href="/#Inicio" class="bg-[#E9E8E8] text-[#000000]
+                        transition-all duration-300 ease-out
+                        hover:scale-105 hover:bg-[#000000] hover:text-[#E9E8E8] 
+                        py-[.6rem] md:py-[1rem]
+                        pl-[.6rem] md:pl-[1rem]
+                        w-[30%] xl:w-[20%] xl:h-full
+                        block text-left no-underline">
+                        <p>Inicio</p>
+                    </a>
+                    <a href="/#Cotizacion" class="bg-[#000000] text-[#E9E8E8] 
+                        transition-all duration-300 ease-out
+                        hover:scale-105 hover:bg-[#E9E8E8] hover:text-[#000000] 
+                        py-[.6rem] md:py-[1rem]
+                        pl-[.6rem] md:pl-[1rem]
+                        w-[30%] xl:w-[20%]
+                        block text-left no-underline">
+                        <p>Cotización</p>
+                    </a>
+                    <a href="/#Ejemplos" class="bg-[#E9E8E8] text-[#000000] 
+                        transition-all duration-300 ease-out
+                        hover:scale-105 hover:bg-[#000000] hover:text-[#E9E8E8] 
+                        py-[.6rem] md:py-[1rem]
+                        pl-[.6rem] md:pl-[1rem]
+                        w-[30%] xl:w-[20%]
+                        block text-left no-underline">
+                        <p>Ejemplo</p>
+                    </a>
+                </div>
+                {/* Info */}
+                <div class='last:self-end
+                    flex flex-col items-end
+                '>
+                    <div class='w-full bg-[#000000] 
+                        rounded-tl-[4rem] p-[2rem]
+                    '>
+                    <div class='Ibmlight
+                        text-[3vw] md:text-[2.2vw] lg:text-[1.8vw] xl:text-[1.2vw] 2xl:text-[1vw] 
+                    '>
+                        <p>&nbsp;📧&nbsp;soporte@arcadia-studio.shop</p>
+                        <p>&nbsp;📞&nbsp;+52 8148135618</p>
+                        <p>&nbsp;📍&nbsp;México</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-[4rem] Ibmlight
+            flex justify-center items-center flex-col
+            text-[3vw] md:text-[2.2vw] lg:text-[1.4vw] xl:text-[1vw]
+        ">  
+            <div class="flex justify-center text-center
+                w-[70%] md:w-full
+            ">
+                <p class='IbmBold
+                    text-[3vw] md:text-[2.2vw] lg:text-[1.8vw] xl:text-[1vw]
+                '>
+                    © 2025 Arcadia Studio. Todos los derechos reservados.
+                </p>
+            </div>
+            <div class="w-full h-[.5px] bg-[#E9E8E8] xl:hidden
+                my-[1rem] md:my-[2rem] lg:my-[1rem]
+            "></div>
+            <div class="flex flex-col lg:flex-row text-center
+                gap-[.5rem] md:gap-[1rem]
+            ">
+                <a href="/politica-de-privacidad" target="_blank" class="hover:bg-white hover:text-black hover:px-2 transition-all duration-300 ease-out cursor-pointer inline-block">
+                    <p>Política de privacidad</p>
+                </a>
+                <a href="/terminos-y-condiciones" target="_blank" class="hover:bg-white hover:text-black hover:px-2 transition-all duration-300 ease-out cursor-pointer inline-block">
+                    <p>Términos y condiciones</p>
+                </a>
+                <a href="/aviso-de-cookies" target="_blank" class="hover:bg-white hover:text-black hover:px-2 transition-all duration-300 ease-out cursor-pointer inline-block">
+                    <p>Aviso de cookies</p>
+                </a>
+                <a href="/garantia-de-calidad" target="_blank" class="hover:bg-white hover:text-black hover:px-2 transition-all duration-300 ease-out cursor-pointer inline-block">
+                    <p>Garantía de calidad</p>
+                </a>
+            </div>
+        </div>
+        <Image
+            src={Arcadia_ico}
+            alt="Logo de Arcadia"
+            class="w-[10%] lg:w-[5%] h-auto absolute bottom-5 md:bottom-10 right-5 md:right-10"
+            loading="lazy"
+        />
+    </div>
+</div>
+
+<style>
+    .FooterBackground{
+        background: #161717;
+        background: radial-gradient(circle, rgba(22, 23, 23, 1) 0%, rgba(97, 97, 97, 1) 35%, rgba(233, 232, 232, 1) 100%);
+    }
+
+</style>

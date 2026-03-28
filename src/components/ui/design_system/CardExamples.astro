@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import Arcadia_ico from "../../../assets/icons/Arcadia_ico.svg";
+
+import YogaEjemplo from '../../../assets/ejemplos/yoga/yoga-web-desing.jpg';
+
+const images = [
+    Arcadia_ico,
+    YogaEjemplo
+];
+
+interface Props {
+    title: string;
+    text: string;
+    img: string | number;
+    link: string;
+
+    subrayado: Boolean;
+}
+const { title, text, img = 0 , subrayado, link } = Astro.props as Props;
+const index = Number(img);
+
+// fallback seguro
+const selectedImage = images[index] ?? images[0];
+---
+
+<div class="w-full h-full flex flex-col bg-[#000000] relative">
+    <Image loading="lazy" src={Arcadia_ico} alt="Arcadia_Logo" class="fill-white drop-shadow-xl/25 w-[10%] lg:w-[8%] xl:w-[10%] absolute bottom-[1rem] right-[1rem]"/>
+    <div class="w-full flex-1 text-[#E9E8E8] p-[2rem] lg:p-[1.5rem] xl:p-[2rem]">
+        <p class={`IbmBold leading-none mb-[1rem] w-[95%] text-[7vw] md:text-[5vw] lg:text-[2vw] xl:text-[2vw] ${subrayado ? 'line-through decoration-[#FFAB50]' : 'block'}`}>
+            {title}
+        </p>
+
+        <p class="Ibmlight leading-none
+            text-[3vw] md:text-[2.2vw] lg:text-[1vw] xl:text-[1vw]
+        ">{text}</p>
+    </div>
+    <div class="w-full aspect-1/1 bg-blue-200 rounded-t-4xl p-[2rem] lg:p-[1.5rem] xl:p-[2rem] flex items-end relative overflow-hidden">
+        <Image
+            loading="lazy"
+            src={selectedImage}
+            alt="Yoga"
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="w-full flex justify-start items-center">
+            <a href={link} target="_blank" rel="noopener noreferrer" class="flex jusitfy-center items-center bg-[#E9E8E8]/60 px-[1rem] py-[.5rem] pr-[.5rem] rounded-full gap-[.5rem] backdrop-blur-md
+                trasition-all duration-300 ease-out hover:scale-105 shadow-xl
+                text-[3vw] md:text-[2.2vw] lg:text-[1vw] xl:text-[1vw] Ibmlight
+            ">
+                <p>Ver mas</p>
+                <div class="w-6 aspect-1/1 bg-[#FFAB50] IbmBold rounded-full flex justify-center items-center">
+                    <p>→</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

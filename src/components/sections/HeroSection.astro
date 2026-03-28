@@ -1,0 +1,166 @@
+---
+import { Image } from "astro:assets";
+import ButtonHeroSection from "../ui/design_system/ButtonHeroSection.astro";
+
+import Arcadia_ico from "../../assets/icons/Arcadia_ico.svg";
+import Arcadia_Logo from "../../assets/images/Arcadia_Logo.svg";
+---
+
+{/* Main Div */}
+<div class="w-full bg-[#000000] flex flex-col md:flex-row" id="Inicio">
+    {/* Part Flex-1 */}
+    <div class="flex-1 flex flex-col items-center relative">
+        {/* Arcadia_background part */}
+        <div
+            class="w-[90%] flex-1 flex flex-col items-center Arcadia_background rounded-[4rem] z-3 Ar_Padre_Fchild pb-[5rem] justify-end relative"
+        >
+            {/* Left part */}
+            <div
+                class="z-2 flex flex-col bg-[#FFAB50] self-start w-[35%] md:w-[30%] lg:w-[25%] xl:w-[20%] xl:absolute xl:top-0 xl:left-0"
+            >
+                <div
+                    class="w-full aspect-9/8 bg-[#000000] flex justify-center items-center"
+                >
+                    <Image
+                        src={Arcadia_ico}
+                        alt="Logo de Arcadia"
+                        class="w-[50%] h-auto"
+                        loading="eager"
+                    />
+                </div>
+                <div class="w-15 h-15">
+                    <div
+                        class="w-full h-full bg-[#000000] [mask-image:radial-gradient(circle_at_bottom_right,transparent_70%,black_71%)]"
+                    >
+                    </div>
+                </div>
+            </div>
+            {/* First title */}
+            <div
+                class="absolute flex justify-center items-center text-center top-[2rem] right-0 w-[65%] md:w-[70%] lg:w-[75%] xl:w-[80%]"
+            >
+                <div
+                    class="bg-[#000000] text-[#E9E8E8] w-[85%] IbmLight-italic flex justify-center text-[2.5vw] md:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1vw]"
+                >
+                    <h1 class="w-[80%] leading-none py-[.5rem] lg:py-[.25rem] flex justify-center items-center">
+                        Diseño de páginas web y tiendas online a medida
+                    </h1>
+                </div>
+            </div>
+            {/* Texto principal */}
+            <div
+                class="w-full flex justify-center xl:justify-end text-[#E9E8E8] mt-[1rem] md:mt-0"
+            >
+                <div class="flex flex-col items-center w-[90%] xl:w-[75%]">
+                    <div
+                        class="leading-none text-[5vw] md:text-[3.5vw] xl:text-[2vw] xl:pr-[4rem]"
+                    >
+                        <p
+                            class="IbmLight-italic text-[7vw] md:text-[5vw] xl:text-[4vw]"
+                        >
+                            <span
+                                class="text-[7.8vw] md:text-[7vw] xl:text-[4.8vw]"
+                                >Creamos</span
+                            >
+                            <span> tu </span>
+                            <span
+                                class="IbmBold text-[8.2vw] md:text-[7.5vw] xl:text-[5.2vw]"
+                                >web</span
+                            >
+                        </p>
+                        <p
+                            class="IbmBold text-[8.2vw] md:text-[7.5vw] xl:text-[5.2vw]"
+                        >
+                            <span>a </span>
+                            <span>medida</span>
+                        </p>
+                        <p class="IbmLight-italic text-[3vw] md:text-[2.5vw] lg:text-[2.6vw] xl:text-[1.8vw]">
+                            lista para
+                            <span class="IbmBold">vender</span>
+                            <span class="IbmRegular">en días, no meses.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/* Subtítulo inferior */}
+            <h2
+                class="px-2 text-center bg-[#FFAB50] text-[#000000] my-[1rem] IbmBold text-[2.5vw] md:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1vw]"
+            >
+                Diseño + Dominio + 1 año de hosting = Una sola compra
+            </h2>
+            <Image
+                src={Arcadia_Logo}
+                alt="Logo de Arcadia"
+                class="w-[80%] h-auto fill-white drop-shadow-2xl/50"
+                loading="eager"
+                fetchpriority="high"
+            />
+            {/* Arcadia_background end part */}
+        </div>
+        {/* Franja inferior */}
+        <div
+            class="min-h-[6rem] flex justify-between items-center bg-[#000000] z-3 rounded-r-full text-[#e9e8e8] w-3/4 pr-[1rem]"
+        >
+            <p
+                class="Ibmlight text-[3.4vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.2vw] 2xl:text-[1.1vw]"
+            >
+                <span class="IbmBold-italic">Listo.</span>
+                <span> Tú te encargas del negocio, </span>
+                <span class="IbmBold">yo de la web.</span>
+            </p>
+            {/* Blue DIv */}
+            <div
+                class="aspect-square bg-blue-200 rounded-full w-[25%] md:w-[15%] lg:w-[10%] xl:w-[8%] 2xl:w-[6%]
+                mr-[.5rem]"
+            >
+            </div>
+        </div>
+        {/* Fondo inferior derecho */}
+        <div
+            class="absolute bg-[#e9e8e8] bottom-0 right-0 aspect-square z-2 rounded-tr-[4rem] h-3/8 lg:h-1/2"
+        >
+        </div>
+    </div>
+    {/* End to first part */}
+
+    <div class="flex flex-col z-1 w-full md:w-[30%] relative">
+        <div class="w-full min-h-[10rem] z-1 bg-[#000000] md:hidden">
+            <div
+                class="Arcadia_background w-[80%] h-[7rem] rounded-bl-[2rem] rounded-r-[2rem] flex justify-center items-center"
+            >
+                <ButtonHeroSection />
+            </div>
+        </div>
+
+        <div class="w-full aspect-square flex justify-center items-center">
+            <div
+                class="w-[80%] aspect-square bg-[#e9e8e8] rounded-[4rem] flex justify-center items-center relative"
+            >
+                <div
+                    class="w-[40%] aspect-square bg-[#FFAB50] absolute bottom-0 right-0 rounded-br-[4rem]"
+                >
+                </div>
+                <div
+                    class="w-[80%] aspect-square bg-[#000000] rounded-[3rem] flex justify-center items-center z-2"
+                >
+                    <Image
+                        src={Arcadia_ico}
+                        alt="Logo de Arcadia"
+                        class="w-[50%] h-auto"
+                        loading="eager"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute z-[-1] w-1/2 h-full bg-gray-300 right-0"></div>
+
+        <div class="w-full min-h-[15rem] bg-[#000000] z-1 hidden md:flex">
+            <div
+                class="Arcadia_background rounded-bl-[2rem] rounded-r-[2rem] flex justify-center items-center w-[90%] lg:w-[90%] xl:w-[80%] 2xl:w-[80%] h-[8rem] lg:h-[10rem] xl:h-[10rem] 2xl:h-[12rem]"
+            >
+                <ButtonHeroSection />
+            </div>
+        </div>
+    </div>
+</div>

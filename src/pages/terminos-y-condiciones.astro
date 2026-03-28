@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+import LegalTermsEn from '../components/ui/legal/LegalTermsEn.astro'
+---
+
+<Layout title="Términos y Condiciones del Servicio | Arcadia Studio">
+    <LegalTermsEn title="Términos y Condiciones" >
+        <div class="w-full Ibmlight text-[3vw] md:text-[2.5vw] lg:text-[1vw] 2xl:text-[.9vw] flex flex-col">
+            <p class="mb-[.5rem] self-end">Última actualización: 28 de diciembre 2025</p>
+            <p>Al acceder y utilizar este sitio web aceptas los siguientes términos:</p>
+            <div class="w-[90%] self-end">
+                <p class="IbmBold my-[.5rem]">1. Uso del sitio</p>
+                <ul class="pl-[2rem] list-disc">
+                    <li>El contenido de este sitio es informativo y está destinado a ofrecer servicios de diseño y desarrollo web. Queda prohibido el uso del sitio para fines ilegales o no autorizados.</li>
+                </ul>
+                <p class="IbmBold my-[.5rem]">2. Propiedad intelectual</p>
+                <ul class="pl-[2rem] list-disc">
+                    <li>Todos los textos, diseños, logotipos y contenidos son propiedad de Arcadia Studio, salvo que se indique lo contrario. No está permitida su reproducción sin autorización previa.</li>
+                </ul>
+                <p class="IbmBold my-[.5rem]">3. Responsabilidad</p>
+                <ul class="pl-[2rem] list-disc">
+                    <li class="list-none">Arcadia Studio no se hace responsable por:</li><br>
+                    <li>Interrupciones temporales del sitio</li>
+                    <li>Errores técnicos ajenos a nuestro control</li>
+                    <li>Uso indebido de la información proporcionada</li>
+                </ul>
+                <p class="IbmBold my-[.5rem]">4. Modificaciones</p>
+                <ul class="pl-[2rem] list-disc">
+                    <li>Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor desde su publicación.</li>
+                </ul>
+            </div>
+        </div>
+    </LegalTermsEn>
+</Layout>
